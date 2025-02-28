@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktek Modul 03 CSS dan JS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .static {
+            position: static;
+            background-color: aquamarine;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .relative {
+            position: relative;
+            background-color: aliceblue;
+            padding: 20px;
+            top: 10px;
+            left: 20px;
+        }
+
+        .container {
+            position: relative;
+            border: 3px solid grey;
+            height: 200px;
+            margin: 30px;
+            padding: 20px;
+        }
+
+        .absolute {
+            position: absolute;
+            background-color: antiquewhite;
+            padding: 10px;
+            right: 10px;
+            top:10px;
+        }
+
+        .sticky {
+            position: sticky;
+            background-color: aqua;
+            padding: 10px;
+            top: 0px;
+        }
+
+        .spacer {
+            height: 800px;
+        }
+
+        .fixed {
+            position: fixed;
+            background-color: beige;
+            padding: 10px;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 style="color: grey;">Inline CSS Style</h1>
+        <h1 class="external">External CSS Style</h1>
+    </div>
+    
+    <div class="box">
+        <h1>Padding Margin</h1>
+    </div>
+    <div class="box-dua">
+        <h1>Padding Margin</h1>
+    </div>
+
+    <h2 class="text1">Pengaturan Font</h2>
+    <h2 class="text2">Pengaturan Font</h2>
+    <h2 class="text3">Pengaturan Font</h2>
+    
+    <p class="text4">Format Teks</p>
+    <p class="text5">Format Teks</p>
+    <p class="text6">Format Teks</p>
+    <p class="text7">Format Teks</p>
+
+    <div class="static">Elemen Posisi <b>Static</b> (default)</div>
+    <div class="relative">Elemen Posisi <b>Relative</b> (bergeser dari posisi awal)</div>
+    <div class="container">
+        <div class="absolute">
+            Elemen Posisi <b>Absolute</b> (di dalam container)
+        </div>
+        <p><br>Container Memiliki Posisi <b>Relative</b>, Elemen <b>Absolute</b> di dalam container</p>
+    </div>
+    <div class="sticky">Elemen Posisi <b>Sticky</b> (tetap saat discroll)</div>
+    <div class="spacer"></div>
+    <div class="fixed">Elemen Posisi <b>Fixed</b> (tetap di sudut bawah)</div>
+
+    <div class="kotak">
+        <img src="upn.jpg" alt="ini upn" class="gambar">
+        <p class="textKotak">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eaque cumque architecto vero, animi aut aperiam quisquam impedit dolorem ab. Rerum molestiae, tenetur nobis velit facere quas incidunt sapiente eligendi?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil pariatur architecto mollitia odio, quisquam quidem! Nulla alias commodi quae eos facere maxime explicabo iure autem. Molestiae itaque aliquid excepturi dolorem.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus unde placeat eveniet, id praesentium laborum dolor dolorum labore quae pariatur saepe, dolores eos possimus, molestias atque aut voluptatem! Dignissimos, quidem?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, accusamus quaerat? Unde saepe facilis explicabo vero accusamus numquam, commodi ipsa labore ullam a neque.
+        </p>
+    </div>
+
+    <table class="tabel">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Usia</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Budi</td>
+            <td>Magelang</td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Joko</td>
+            <td>Malang</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Upik</td>
+            <td>Ngawi</td>
+            <td>101</td>
+        </tr>
+    </table>
+
+    <form id="registrasionForm">
+        <h2 class="regis">Formulir Pendaftaran</h2>
+
+        <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <span class="separator">:</span>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+
+        <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <span class="separator">:</span>
+            <input type="text" id="alamat" name="alamat" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tptLahir">Tempat Lahir</label>
+            <span class="separator">:</span>
+            <input type="text" id="tptLahir" name="tptLahir" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tglLahir">Tanggal Lahir</label>
+            <span class="separator">:</span>
+            <input type="date" id="tglLahir" name="tglLahir" required>
+        </div>
+
+        <div class="form-group">
+            <label for="jk">Jenis Kelamin</label>
+            <span class="separator">:</span>
+            <div class="radio-group">
+                <input type="radio" name="jk" value="Laki-laki" required> Laki-laki
+                <input type="radio" name="jk" value="Perempuan" required> Perempuan
+            </div>
+        </div>
+
+        <input type="submit" value="Daftar">
+    </form>
+
+    <script lang="Javascript">
+        document.write("Javascript di file html<br>");
+    </script>
+
+    <script lang="Javascript">
+        var nilai;
+        var nilai2 = 3;
+        nilai = 2;
+        document.write("nilai = "+nilai+"<br>");
+        document.write("nilai2 = "+nilai2+"<br>");
+        document.write("hasil kali = "+nilai*nilai2+"<p>");
+    </script>
+
+    <script lang="Javascript">
+        var x =4;
+        var y = 11;
+        var z = "hitam";
+        var q = "90";
+        ans1 = x + y;
+        ans2 = z + x;
+        ans3 = x + q;
+        ans4 = q - x;
+        ans5 = x * q;
+
+        document.write("x = "+x+"<br>");
+        document.write("y = "+y+"<br>");
+        document.write("z = "+z+"<br>");
+        document.write("q = "+q+"<p>");
+        document.write("x + q = "+ans1+"<br>");
+        document.write("z + x = "+ans2+"<br>");
+        document.write("x + q = "+ans3+"<br>");
+        document.write("q - x = "+ans4+"<br>");
+        document.write("x * q = "+ans5+"<br>");
+    </script>
+
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "Hello World!";
+    </script>
+
+    <p>Paragraf 1.</p>
+    <p>Paragraf 2.</p>
+    <p>Paragraf 3.</p>
+
+    <p id="demo2"></p>
+    <script>
+        var x = document.getElementsByTagName("p");
+        document.getElementById("demo2").innerHTML = 
+            'Paragraf pertama (indeks 9) adalah : ' + x[9].innerHTML;
+    </script>
+
+    <table>
+        <tr onmouseover="this.bgColor='lightblue'" onmouseout="this.bgColor='#f4f4f4'" bgColor="#f4f4f4">
+            <td>Baris Pertama</td>
+        </tr>
+        <tr onmouseover="style.color='red'" onmouseout="style.color='black'">
+            <td>Baris Kedua</td>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById('registrasionForm').addEventListener('submit', function(event) {
+            if (!validasiNama()) {
+                event.preventDefault(); // Mencegah pengiriman form jika validasi gagal
+            }
+        });
+        
+        function validasiNama() {
+            let inputNama = document.getElementById("nama").value;
+            let pola = /^[a-zA-Z' ]+$/; // Hanya huruf, spasis, dan petik satu yang diperbolehkan
+
+            if (!pola.test(inputNama)) {
+                alert("Nama hanya boleh berisi huruf dan tanda petik satu ('')");
+                return false;
+            }
+            alert("Nama valid!");
+            return true;
+        }
+    </script>
+</body>
+</html>
