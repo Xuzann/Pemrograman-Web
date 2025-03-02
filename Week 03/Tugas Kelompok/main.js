@@ -5,21 +5,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const messageInput = document.getElementById("message");
     const donationList = document.getElementById("donationList");
 
+    messageInput.addEventListener("input",function() {
+        if (this.value.length > 100) {
+            this.value = this.value.slice(0,100);
+        }
+    });
+
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         
         const name = nameInput.value.trim();
-        const rawAmount = amountInput.value.trim(); // Ambil nilai input sebagai string asli
-        const amount = Number(rawAmount.replace(/,/g, "")); // Ubah ke angka, tetap mempertahankan tanda negatif
+        const rawAmount = amountInput.value.trim(); 
+        const amount = Number(rawAmount.replace(/,/g, "")); 
         const message = messageInput.value.trim();
         
-        // Validasi input nama (tidak boleh ada angka)
+        
         if (!/^[a-zA-Z\s']+$/.test(name)) {  
             alert("Nama hanya boleh mengandung huruf, spasi, dan petik satu!");
             return; 
         }
 
-        // Validasi jumlah donasi (tidak boleh negatif dan minimal 10.000)
         if (isNaN(amount) || amount < 10000) {
             alert("Jumlah donasi minimal Rp 10.000");
             return;
